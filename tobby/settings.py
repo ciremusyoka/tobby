@@ -39,10 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'imagesapp',
     'blogapp',
+    'editorapp',
     'messagesapp',
     'rest_framework',
     'imagekit',
     'corsheaders',
+
+    'ckeditor',
 
 ]
 
@@ -131,6 +134,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
 MEDIA_URL = '/media/'
-
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 

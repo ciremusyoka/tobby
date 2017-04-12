@@ -2,10 +2,14 @@ from django.shortcuts import render
 from .models import Image
 from .serializers import ImageSerializer,previewSerializers
 from rest_framework import generics
+from .pagination import Pages
 
 class ImageList (generics.ListAPIView):
     serializer_class = previewSerializers
     queryset = Image.objects.all()
+    pagination_class = Pages
+
+
 
     def get_queryset(self):
         return Image.objects.filter(public=True)

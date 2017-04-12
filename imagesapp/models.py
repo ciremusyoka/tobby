@@ -46,7 +46,7 @@ class Image(models.Model):
                                 format='JPEG',
                                 options={'quality': 90})
     card_image = ImageSpecField(source='image',
-                                processors=[ResizeToFill(800, 537)],
+                                processors=[ResizeToFill(265, 180)],
                                 format='JPEG',
                                 options={'quality': 100})
     details_image = ImageSpecField(source='image',
