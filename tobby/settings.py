@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'imagesapp',
     'blogapp',
-    'editorapp',
     'messagesapp',
     'rest_framework',
     'imagekit',

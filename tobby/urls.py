@@ -23,6 +23,5 @@ urlpatterns = [
     url(r'^api/',include('imagesapp.urls', namespace='images')),
     url(r'^api/',include('blogapp.urls', namespace='blog')),
     url(r'^api/',include('messagesapp.urls', namespace='message')),
-    url(r'^api/',include('editorapp.urls', namespace='text')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
