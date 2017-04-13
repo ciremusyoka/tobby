@@ -5,7 +5,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from imagesapp.models import Image
 
 class Blog(models.Model):
-    type=(('weddings','weddings'),('pre-weddings','pre-weddings'))
+    type=(('weddings','weddings'),('pre-weddings','pre-weddings'),('family','family'),('portrait','portrait'),('personal','personal'),('landscape','landscape'))
     category =models.CharField(max_length=20, choices=(type))
     title = models.CharField(max_length=50)
     top_description = RichTextUploadingField()

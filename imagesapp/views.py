@@ -18,6 +18,5 @@ class ImageList (generics.ListAPIView):
         if(category==''):
             category=None
         if category is not None:
-            print (category)
             queryset = queryset.filter(category  = category)
         return queryset.order_by('-id')
