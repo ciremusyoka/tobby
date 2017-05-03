@@ -23,7 +23,7 @@ class previewSerializers (serializers.ModelSerializer):
     dominantColor = serializers.SerializerMethodField()
     class Meta:
         model = Image
-        fields=('id','category','name','preview_xxs','preview_xs','preview_s','preview_m','preview_l','preview_xl','raw','dominantColor')
+        fields=('id','category','featured','name','preview_xxs','preview_xs','preview_s','preview_m','preview_l','preview_xl','raw','dominantColor')
 
 
     def rgb_to_hex(self,rgb):

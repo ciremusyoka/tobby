@@ -13,10 +13,11 @@ def get_file_path(instance, filename):
     return os.path.join('media', filename)
 
 class Image(models.Model):
-    types = (('W','wedding'),('PW','pre-wedding'),('F','family'),('PO','portrait'),('PE','personal'),('LS','landscape'))
+    types = (('W','wedding'),('PO','portrait'),('PE','personal'),('LS','landscape'))
     category = models.CharField(max_length=15, choices=(types))
     name = models.CharField(max_length=20)
     public = models.BooleanField(default=True)
+    featured = models.BooleanField(default=True)
     image = models.ImageField(upload_to=get_file_path)
     dominantColor = models.CharField(max_length=20,null=True,blank=True)
 

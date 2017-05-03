@@ -64,25 +64,38 @@ class BlogDetailsSerializer(serializers.ModelSerializer):
                    'bottom_description', 'image_1', 'image_2', 'image_3','similar' )
 
     def get_image_one(self, obj):
+        if not obj.image_one:
+            return None
         self.request = self.context.get("request")
         return self.request.build_absolute_uri(obj.image_one.image.url)
 
     def get_image_two(self, obj):
+        if not obj.image_two:
+            return None
         self.request = self.context.get("request")
         return self.request.build_absolute_uri(obj.image_two.image.url)
 
     def get_image_three(self, obj):
+        if not obj.image_three:
+            return None
         self.request = self.context.get("request")
         return self.request.build_absolute_uri(obj.image_three.image.url)
 
+    # card images
     def get_image_1(self, obj):
+        if not obj.image_one:
+            return None
         self.request = self.context.get("request")
         return self.request.build_absolute_uri(obj.image_one.card_image.url)
 
     def get_image_2(self, obj):
+        if not obj.image_two:
+            return None
         return self.request.build_absolute_uri(obj.image_two.card_image.url)
 
     def get_image_3(self, obj):
+        if not obj.image_three:
+            return None
         return self.request.build_absolute_uri(obj.image_three.card_image.url)
 
     def get_similar(self, obj):
