@@ -7,14 +7,11 @@ from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 class Blog(models.Model):
     type=(('weddings','weddings'),('pre-weddings','pre-weddings'),('family','family'),('portrait','portrait'),('personal','personal'),('landscape','landscape'))
-    category =models.CharField(max_length=20, choices=(type))
+    category = models.CharField(max_length=20, choices=(type))
     title = models.CharField(max_length=50)
-    top_description = RichTextUploadingField()
-    image_one = models.ForeignKey(Image, related_name='image_one',)
-    image_two = models.ForeignKey(Image, related_name='image_two', null=True, blank=True)
-    image_three = models.ForeignKey(Image, related_name='image_three', null=True, blank=True)
-    bottom_description = RichTextUploadingField( null=True, blank=True)
-
+    preview = models.CharField(max_length=200)
+    description = RichTextUploadingField()
+    image = models.ForeignKey(Image, related_name='image_one', )
 
     def __str__(self):
         return self.title

@@ -21,9 +21,11 @@ class LandingPageList(generics.ListAPIView):
     #     img.save(response, "JPEG")
     #     return response
 
-    # def my_image(request):
-    #     image_data = open("/path/to/my/image.png", "rb").read()
-    #     return HttpResponse(image_data, mimetype="image/png")
+    def my_image(request):
+        img = Personal.landing_image
+        print(img)
+        image_data = open(img, "rb").read()
+        return HttpResponse(image_data, mimetype="image/png")
 
 class AboutList(generics.ListAPIView):
     serializer_class = AboutSerializer
