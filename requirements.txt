@@ -24,7 +24,7 @@ html5lib==0.999
 httpie==0.8.0
 httplib2==0.8
 itsdangerous==0.24
-lxml==3.3.3
+lxml==4.6.2
 oauthlib==0.6.1
 oneconf==0.3.7.14.04.1
 pexpect==3.1
