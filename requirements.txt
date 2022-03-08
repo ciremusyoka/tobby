@@ -21,7 +21,7 @@ dirspec==13.10
 flup==1.0.2
 gyp==0.1
 html5lib==0.999
-httpie==0.8.0
+httpie==3.1.0
 httplib2==0.8
 itsdangerous==0.24
 lxml==3.3.3
